@@ -1,6 +1,5 @@
 # HuggingfaceMakeWark
-黄脸醒来
 
+黄脸嘿嘿
 
-https://huggingface.co/spaces/sanbo1200/gpt3api
-https://huggingface.co/spaces/sanbo1200/duck2api
+https://huggingface.co/spaces/sanbo1200/
