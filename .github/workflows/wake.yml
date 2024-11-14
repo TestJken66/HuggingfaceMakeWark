@@ -33,7 +33,7 @@ jobs:
               "stream": true
           }'
 
-      - name: wake 
+      - name: wake duck2api
         shell: bash
         continue-on-error: true
         run: |
