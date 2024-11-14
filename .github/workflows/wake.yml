@@ -69,3 +69,26 @@ jobs:
                "messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],
                "stream": true
              }'
+
+
+      - name: wake ddghat
+        shell: bash
+        continue-on-error: true
+        run: |
+          curl https://sanbo1200-ddghat.hf.space/models
+
+          curl --location --request POST 'https://sanbo1200-ddghat.hf.space/completions' \
+            --header 'Content-Type: application/json' \
+            --data-raw '{
+                "model": "gpt-4o-mini",
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": "你是什么模型?你的知识库截止到什么时间?"
+                    }
+                ],
+                "stream": true
+            }'
+
+
+
