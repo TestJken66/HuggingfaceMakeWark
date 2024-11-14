@@ -44,3 +44,28 @@ jobs:
                "messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],
                "stream": true
              }'
+
+      - name: wake d1
+        shell: bash
+        continue-on-error: true
+        run: |
+          curl --location 'https://sanbo1200-d1.hf.space/completions' \
+          --header 'Content-Type: application/json' \
+          --data '{
+               "model": "gpt-4o-mini",
+               "messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],
+               "stream": true
+             }'
+
+
+      - name: wake d2
+        shell: bash
+        continue-on-error: true
+        run: |
+          curl --location 'https://sanbo1200-d2.hf.space/completions' \
+          --header 'Content-Type: application/json' \
+          --data '{
+               "model": "gpt-4o-mini",
+               "messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],
+               "stream": true
+             }'
