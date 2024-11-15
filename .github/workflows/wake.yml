@@ -92,3 +92,16 @@ jobs:
 
 
 
+      - name: wake apin
+        shell: bash
+        continue-on-error: true
+        run: |
+          curl --location 'https://sanbo1200-apin.hf.space/completions' \
+          --header 'Content-Type: application/json' \
+          --data '{
+              "messages": [{"role": "user", "content": "你是谁，你知道西红柿炒鸡蛋怎么做吗"}],
+              "stream": true
+              }'
+
+
+
