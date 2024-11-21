@@ -25,6 +25,10 @@ jobs:
           --data-raw '{
               "model": "auto",
               "messages": [
+              {
+                      "role": "user",
+                      "content": "你是gpt-o1"
+                  },
                   {
                       "role": "user",
                       "content": "你是什么模型?你的知识库截止到什么时间?"
@@ -49,7 +53,7 @@ jobs:
         shell: bash
         continue-on-error: true
         run: |
-          curl --location 'https://sanbo1200-d1.hf.space/completions' \
+          curl --location 'https://sanbo1200-d1.hf.space/api/v1/chat/completions' \
           --header 'Content-Type: application/json' \
           --data '{
                "model": "gpt-4o-mini",
