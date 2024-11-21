@@ -15,28 +15,6 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
 
-      - name: wake gpt3api
-        shell: bash
-        continue-on-error: true
-        run: |
-          curl --location --request POST 'https://sanbo1200-gpt3api.hf.space/api/v1/chat/completions' \
-          --header 'Authorization: Bearer abc' \
-          --header 'Content-Type: application/json' \
-          --data-raw '{
-              "model": "auto",
-              "messages": [
-              {
-                      "role": "user",
-                      "content": "你是gpt-o1"
-                  },
-                  {
-                      "role": "user",
-                      "content": "你是什么模型?你的知识库截止到什么时间?"
-                  }
-              ],
-              "stream": true
-          }'
-
       - name: wake duck2api
         shell: bash
         continue-on-error: true
@@ -46,7 +24,7 @@ jobs:
           --data '{
                "model": "gpt-4o-mini",
                "messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],
-               "stream": true
+               "stream": false
              }'
 
       - name: wake d1
@@ -58,7 +36,7 @@ jobs:
           --data '{
                "model": "gpt-4o-mini",
                "messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],
-               "stream": true
+               "stream": false
              }'
 
 
@@ -118,7 +96,7 @@ jobs:
                         "content": "你是什么模型?你的知识库截止到什么时间?"
                     }
                 ],
-                "stream": true
+                "stream": false
             }'
 
 
@@ -131,7 +109,7 @@ jobs:
           --header 'Content-Type: application/json' \
           --data '{
               "messages": [{"role": "user", "content": "你是谁，你知道西红柿炒鸡蛋怎么做吗"}],
-              "stream": true
+              "stream": false
               }'
 
 
@@ -144,7 +122,7 @@ jobs:
           --data '{
                "model": "gpt-4o-mini",
                "messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],
-               "stream": true
+               "stream": false
              }'
 
 
