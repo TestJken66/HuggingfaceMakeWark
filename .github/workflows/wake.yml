@@ -108,7 +108,7 @@ jobs:
           curl --location 'https://sanbo1200-apin.hf.space/completions' \
           --header 'Content-Type: application/json' \
           --data '{
-              "messages": [{"role": "user", "content": "你是谁，你知道西红柿炒鸡蛋怎么做吗"}],
+              "messages": [{"role":"system","content":"你是一个辅助机器人，特点贼聪明"},{"role": "user", "content": "你是谁，你的知识库更新到什么时间"}],
               "stream": false
               }'
 
