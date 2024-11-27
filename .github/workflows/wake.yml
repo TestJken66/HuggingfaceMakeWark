@@ -84,8 +84,9 @@ jobs:
         shell: bash
         continue-on-error: true
         run: |
+          echo "gpt-4o-mini 模型列表..."
           curl https://sanbo1200-ddghat.hf.space/models
-
+          echo "gpt-4o-mini ----你是什么模型-"
           curl --location --request POST 'https://sanbo1200-ddghat.hf.space/completions' \
             --header 'Content-Type: application/json' \
             --data-raw '{
@@ -105,6 +106,7 @@ jobs:
         shell: bash
         continue-on-error: true
         run: |
+          echo "gpt-4o-mini ----你是谁，你的知识库更新到什么时间-"
           curl --location 'https://sanbo1200-apin.hf.space/completions' \
           --header 'Content-Type: application/json' \
           --data '{
@@ -117,6 +119,7 @@ jobs:
         shell: bash
         continue-on-error: true
         run: |
+          echo "gpt-4o-mini -----你的知识库最后什么日期"
           curl --location 'https://ethanmaht-dai.hf.space/api/v1/chat/completions' \
           --header 'Content-Type: application/json' \
           --data '{
@@ -126,4 +129,27 @@ jobs:
              }'
 
 
+      - name: wake yxmnjxzx
+        shell: bash
+        continue-on-error: true
+        run: |
+          echo "----# https://huggingface.co/spaces/yxmnjxzx/openai-reverse-proxy"
+          curl --location 'https://yxmnjxzx-openai-reverse-proxy.hf.space/api/v1/chat/completions' \
+          --header 'Content-Type: application/json' \
+          --data '{
+               "model": "gpt-4o",
+               "messages": [
+                  {
+                    "role": "system",
+                    "content": "You are a helpful assistant."
+                  },
+                  {
+                    "role": "user",
+                    "content": "Hello, who are you?"
+                  }
+                ],
+               "stream": false,
+                "temperature": 0.7,
+                "max_tokens": 8000
+             }'
 
