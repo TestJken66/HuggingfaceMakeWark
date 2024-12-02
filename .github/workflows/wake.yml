@@ -19,7 +19,24 @@ jobs:
         shell: bash
         continue-on-error: true
         run: |
+          echo "-----completions 请求结果"
           curl --location 'https://sanbo1200-duck2api.hf.space/completions' \
+          --header 'Content-Type: application/json' \
+          --data '{
+               "model": "gpt-4o-mini",
+               "messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],
+               "stream": false
+             }'
+          echo "-----hf/completions 请求结果"
+          curl --location 'https://sanbo1200-duck2api.hf.space/hf/v1/chat/completions' \
+          --header 'Content-Type: application/json' \
+          --data '{
+               "model": "gpt-4o-mini",
+               "messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],
+               "stream": false
+             }'
+          echo "-----api/completions 请求结果"
+          curl --location 'https://sanbo1200-duck2api.hf.space/api/v1/chat/completions' \
           --header 'Content-Type: application/json' \
           --data '{
                "model": "gpt-4o-mini",
