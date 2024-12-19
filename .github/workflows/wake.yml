@@ -75,7 +75,22 @@ jobs:
                "messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],
                "stream": false
              }'
-
+          echo "----sanbo110----"
+          curl --location 'https://sanbo110-test.hf.space/api/v1/chat/completions' \
+          --header 'Content-Type: application/json' \
+          --data '{
+               "model": "gpt-4o-mini",
+               "messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],
+               "stream": false
+             }'
+          echo "----whats----"
+          curl --location 'https://sanbo110-whats-this.hf.space/api/v1/chat/completions' \
+          --header 'Content-Type: application/json' \
+          --data '{
+               "model": "gpt-4o-mini",
+               "messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],
+               "stream": false
+             }'
 
       - name: wake apin
         shell: bash
