@@ -85,16 +85,49 @@ jobs:
              }'
           echo "----whats----"
           curl --location 'https://sanbo110-whats-this.hf.space/api/v1/chat/completions' \
-          --H 'Content-Type: application/json' \
-          --data-raw '{
+          --header 'Content-Type: application/json' \
+          --data '{
                "model": "gpt-4o-mini",
                "messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],
                "stream": false
              }'
           echo "----gpt-4o----"
-          curl 'https://sanbo1200-gpt4free.hf.space/backend-api/v2/conversation' -H 'accept: text/event-stream' -H 'content-type: application/json' -H 'origin: https://sanbo1200-gpt4free.hf.space' --data-raw '{"id":"7450489680389462209","conversation_id":"49de3eec-3cd5-443d-b598-193e44fda35","model":"gpt-4o","web_search":true,"provider":"","messages":[{"role":"user","content":"阿拉伯数字的由来"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
+          curl 'https://sanbo1200-gpt4free.hf.space/backend-api/v2/conversation' \
+          --header 'accept: text/event-stream' \
+          --header 'content-type: application/json' \
+          --header 'origin: https://sanbo1200-gpt4free.hf.space' \
+          --data '{
+            "id":"7450489680389462209",
+            "conversation_id":"49de3eec-3cd5-443d-b598-193e44fda35",
+            "model":"gpt-4o",
+            "web_search":false,
+            "provider":"",
+            "messages":[
+              {"role":"user","content":"阿拉伯数字的由来"}
+            ],
+            "auto_continue":true,
+            "download_images":true,
+            "api_key":null,
+            "ignored":[]
+          }'
           echo "-------flux-------"
-          curl 'https://sanbo1200-gpt4free.hf.space/backend-api/v2/conversation' -H 'accept: text/event-stream' -H 'content-type: application/json' --data-raw '{"id":"7450491277595787166","conversation_id":"49de3eec-3cd5-443d-b598-193e44fda35","model":"flux","web_search":true,"provider":"","messages":[{"role":"user","content":"一只可爱的猫"},{"role":"user","content":"a cute cat"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
+          curl 'https://sanbo1200-gpt4free.hf.space/backend-api/v2/conversation' \
+          -H 'accept: text/event-stream' \
+          -H 'content-type: application/json' \
+          --data '{
+            "id":"7450491277595787166",
+            "conversation_id":"49de3eec-3cd5-443d-b598-193e44fda35",
+            "model":"flux",
+            "web_search":false,
+            "provider":"",
+            "messages":[
+              {"role":"user","content":"a cute cat"}
+              ],
+            "auto_continue":true,
+            "download_images":true,
+            "api_key":null,
+            "ignored":[]
+          }'
 
       - name: wake g4f
         shell: bash
