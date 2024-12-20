@@ -110,24 +110,6 @@ jobs:
             "api_key":null,
             "ignored":[]
           }'
-          echo "-------flux-------"
-          curl 'https://sanbo1200-gpt4free.hf.space/backend-api/v2/conversation' \
-          -H 'accept: text/event-stream' \
-          -H 'content-type: application/json' \
-          --data '{
-            "id":"7450491277595787166",
-            "conversation_id":"49de3eec-3cd5-443d-b598-193e44fda35",
-            "model":"flux",
-            "web_search":false,
-            "provider":"",
-            "messages":[
-              {"role":"user","content":"a cute cat"}
-              ],
-            "auto_continue":true,
-            "download_images":true,
-            "api_key":null,
-            "ignored":[]
-          }'
 
       - name: wake g4f
         shell: bash
