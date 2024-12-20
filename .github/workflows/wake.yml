@@ -8,6 +8,8 @@ on:
   schedule:
     - cron: "*/45 * * * *" #   分 时 日 月 周
 
+timeout-minutes: 2
+
 jobs:
   test:
     runs-on: ubuntu-latest
