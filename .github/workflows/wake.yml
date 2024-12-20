@@ -85,12 +85,14 @@ jobs:
              }'
           echo "----whats----"
           curl --location 'https://sanbo110-whats-this.hf.space/api/v1/chat/completions' \
-          --header 'Content-Type: application/json' \
+          --hea¡der 'Content-Type: application/json' \
           --data '{
                "model": "gpt-4o-mini",
                "messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],
                "stream": false
              }'
+          echo "----gpt4free----"
+          curl 'https://sanbo1200-gpt4free.hf.space/backend-api/v2/conversation' -H 'accept: text/event-stream' -H 'content-type: application/json' -H 'origin: https://sanbo1200-gpt4free.hf.space' --data-raw '{"id":"7450489680389462209","conversation_id":"49de3eec-3cd5-443d-b598-193e44fda35","model":"gpt-4o","web_search":true,"provider":"","messages":[{"role":"user","content":"阿拉伯数字的由来"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
 
       - name: wake apin
         shell: bash
