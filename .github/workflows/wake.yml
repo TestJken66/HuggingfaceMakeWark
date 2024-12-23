@@ -108,9 +108,6 @@ jobs:
         continue-on-error: true
         run: |
           curl 'https://hrmndev-g4f.hf.space/backend-api/v2/conversation'-H 'content-type: application/json'-H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'--data-raw '{"id":"7451495136008967937","conversation_id":"7bdbce3a-0239-4778-894f-594eb69cf602","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
-          curl 'https://mrdonstuff-gpt4free.hf.space/backend-api/v2/conversation'-H 'content-type: application/json'-H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'--data-raw '{"id":"7451495381534712828","conversation_id":"51e12012-d657-460c-94da-5cec5bd4e082","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
-          curl 'https://shethjenil-gpt4free.hf.space/backend-api/v2/conversation'-H 'content-type: application/json'--data-raw '{"id":"7451495764089842349","conversation_id":"df682651-8029-4f9f-bbdb-193f246a8ee","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"api_key":null}'
-          curl 'https://ethanmaht-g4f.hf.space/backend-api/v2/conversation'-H 'content-type: application/json'--data-raw '{"id":"7451497941381090224","conversation_id":"ae699456-9200-4b38-92cc-c88774c441cd","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
 
       - name: wake mrdonstuff-gpt4free
         shell: bash
