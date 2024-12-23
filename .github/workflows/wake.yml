@@ -94,10 +94,7 @@ jobs:
         continue-on-error: true
         run: |
           echo "gpt-4o-mini ----你是谁，你的知识库更新到什么时间-"
-          curl --location 'https://sanbo1200-apin.hf.space/completions'        --header 'Content-Type: application/json'        --data '{
-              "messages": [{"role":"system","content":"你是一个辅助机器人，特点贼聪明"},{"role": "user", "content": "你是谁，你的知识库更新到什么时间"}],
-              "stream": false
-              }'
+          curl --location 'https://sanbo1200-apin.hf.space/completions' --header 'Content-Type: application/json' --data '{ "messages": [{"role":"system","content":"你是一个辅助机器人，特点贼聪明"},{"role": "user", "content": "你是谁，你的知识库更新到什么时间"}],"stream": false }'
 
 
       - name: wake ethan
