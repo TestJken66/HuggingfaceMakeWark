@@ -92,25 +92,6 @@ jobs:
                "messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],
                "stream": false
              }'
-          echo "----gpt-4o----"
-          curl 'https://sanbo1200-gpt4free.hf.space/backend-api/v2/conversation' \
-          --header 'accept: text/event-stream' \
-          --header 'content-type: application/json' \
-          --header 'origin: https://sanbo1200-gpt4free.hf.space' \
-          --data '{
-            "id":"7450489680389462209",
-            "conversation_id":"49de3eec-3cd5-443d-b598-193e44fda35",
-            "model":"gpt-4o",
-            "web_search":false,
-            "provider":"",
-            "messages":[
-              {"role":"user","content":"阿拉伯数字的由来"}
-            ],
-            "auto_continue":true,
-            "download_images":true,
-            "api_key":null,
-            "ignored":[]
-          }'
 
       - name: wake g4f
         shell: bash
@@ -118,6 +99,13 @@ jobs:
         run: |
           echo "----g4f----"
           curl https://sanbo1200-gpt4free.hf.space/v1/models
+          echo "-------------------------------------------"
+          echo "-------------------------------------------"
+          echo "-------------------------------------------"
+          curl 'https://sanbo110-g4f.hf.space/backend-api/v2/conversation' -X 'POST' -H 'Content-Type: application/json' --data-binary '{"id":"7451452650408616971","conversation_id":"41c9d5ce-90bb-4450-9c21-193f1adaaf2","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
+          curl 'https://roxky-g4f.hf.space/backend-api/v2/conversation' -H 'accept: text/event-stream' -H 'authorization: Basic YW55OmdwdDRmcmVl' -H 'content-type: application/json' --data-raw '{"id":"7451451646165355177","conversation_id":"139f4e13-e260-4b3c-9dd6-528cde7b659d","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"中国有多少人"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
+          curl 'https://sanbo1200-gpt4free.hf.space/backend-api/v2/conversation' --header 'content-type: application/json' --data '{"id":"7450489680389462209","conversation_id":"49de3eec-3cd5-443d-b598-193e44fda35","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"阿拉伯数字的由来"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
+
 
       - name: wake apin
         shell: bash
