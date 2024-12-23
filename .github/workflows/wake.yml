@@ -74,6 +74,8 @@ jobs:
                "messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],
                "stream": false
              }'
+          curl -X POST https://sanbo1200-degpt.hf.space/hf/v1/chat/completions -H "Content-Type: application/json" -d '{"model": "Qwen2.5-72B", "messages": [{"role": "system", "content": "You are a helpful assistant."}, {"role": "user", "content": "你是什么模型，你有什么特点?"}]}'
+
 
       - name: wake g4f
         shell: bash
