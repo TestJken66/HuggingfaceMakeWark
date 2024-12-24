@@ -152,6 +152,7 @@ jobs:
           echo "xxxxxxx"
            curl 'https://mikeee-nextchat.hf.space/api/openai/v1/chat/completions' -H 'accept: application/json, text/event-stream'   -H 'content-type: application/json'   --data-raw '{"messages":[{"role":"user","content":"你是什么模型，你的知识库截止到什么时间"}],"stream":false,"model":"gpt-4o-mini","temperature":0.5,"presence_penalty":0,"frequency_penalty":0,"top_p":1}'
            curl 'https://mikeee-nextchat.hf.space/api/openai/v1/chat/completions'  -H 'content-type: application/json' --data-raw '{"messages":[{"role":"user","content":"你的什么模型"}],"stream":false,"model":"gpt-4","temperature":0.5,"presence_penalty":0,"frequency_penalty":0,"top_p":1}'
+           curl 'https://mikeee-nextchat.hf.space/api/openai/v1/chat/completions'  -H 'content-type: application/json' --data-raw '{"messages":[{"role":"user","content":"你的什么模型"}],"stream":false,"model":"gpt-4o","temperature":0.5,"presence_penalty":0,"frequency_penalty":0,"top_p":1}'
 
 
 
