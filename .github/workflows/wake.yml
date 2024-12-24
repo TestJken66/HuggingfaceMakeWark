@@ -52,6 +52,10 @@ jobs:
 
           curl --location 'https://sanbo1200-bac.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --header 'Authorization: Bearer 316287378' --data '{"model": "gpt-4o", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}'
 
+           curl --location 'https://mikeee-ddg-chat.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
+
+
+
 
       - name: wake helloai
         shell: bash
@@ -84,7 +88,7 @@ jobs:
         shell: bash
         continue-on-error: true
         run: |
-          curl 'https://sanbo110-g4f.hf.space/backend-api/v2/conversation'  --header  'content-type: application/json'  --data   $'{"id":"7451505100618656824","conversation_id":"303d5a50-bc29-42fc-b093-9284ef04b90c","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto
+          curl 'https://sanbo110-g4f.hf.space/backend-api/v2/conversation'  --header  'content-type: application/json'  --data   $'{"id":"7451505100618656824","conversation_id":"303d5a50-bc29-42fc-b093-9284ef04b90c","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
 
       - name: wake g4f4
         shell: bash
@@ -116,12 +120,6 @@ jobs:
         run: |
            curl 'https://ethanmaht-g4f.hf.space/backend-api/v2/conversation' --header  'content-type: application/json' --data   '{"id":"7451497941381090224","conversation_id":"ae699456-9200-4b38-92cc-c88774c441cd","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
 
-      - name: wake pin
-        shell: bash
-        continue-on-error: true
-        run: |
-           curl --location 'https://sanbo1200-apin.hf.space/completions'  -- header eader  'Content-Type: application/json' --data '{ "messages": [{"role":"system","content":"你是一个辅助机器人，特点贼聪明"},{"role": "user", "content": "你是谁，你的知识库更新到什么时间"}],"stream": false }'
-
       - name: wake ethan
         shell: bash
         continue-on-error: true
@@ -150,4 +148,7 @@ jobs:
           curl --location 'https://mikeee-notdiamond2api1.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o","messages": [{"role": "user", "content": "你的知识库最后什么日期"}]}'
           echo " black2 box"
           curl --location 'https://mikeee-blackbox2api.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --header 'Authorization: Bearer 316287378' --data '{"model": "gpt-4o", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}'
+           curl --location 'https://mikeee-ddg-chat.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
+
+
 
