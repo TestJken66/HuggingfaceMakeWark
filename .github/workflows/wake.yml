@@ -149,6 +149,9 @@ jobs:
           echo " black2 box"
           curl --location 'https://mikeee-blackbox2api.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --header 'Authorization: Bearer 316287378' --data '{"model": "gpt-4o", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}'
            curl --location 'https://mikeee-ddg-chat.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
+          echo "xxxxxxx"
+           curl 'https://mikeee-nextchat.hf.space/api/openai/v1/chat/completions' -H 'accept: application/json, text/event-stream'   -H 'content-type: application/json'   --data-raw '{"messages":[{"role":"user","content":"你是什么模型，你的知识库截止到什么时间"}],"stream":false,"model":"gpt-4o-mini","temperature":0.5,"presence_penalty":0,"frequency_penalty":0,"top_p":1}'
+           curl 'https://mikeee-nextchat.hf.space/api/openai/v1/chat/completions'  -H 'content-type: application/json' --data-raw '{"messages":[{"role":"user","content":"你的什么模型"}],"stream":false,"model":"gpt-4","temperature":0.5,"presence_penalty":0,"frequency_penalty":0,"top_p":1}'
 
 
 
