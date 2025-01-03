@@ -57,7 +57,7 @@ jobs:
           curl --location 'https://mikeee-ddg-chat.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
 
           echo "----13sanbo1200-ddg-chat1.hf.space----"
-          curl --location 'https://sanbo1200-ddg-chat1.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
+          curl --location 'https://sanbo1200-ddg-chat1.hf.space/hhf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
 
           echo "----14helloaiworlds-ddg-docker----"
           curl --location 'https://helloaiworlds-ddg-docker.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
@@ -185,6 +185,27 @@ jobs:
           curl 'https://mikeee-nextchat.hf.space/api/openai/v1/chat/completions'  -H 'content-type: application/json' --data-raw '{"messages":[{"role":"user","content":"你的什么模型"}],"stream":false,"model":"gpt-4","temperature":0.5,"presence_penalty":0,"frequency_penalty":0,"top_p":1}'
 
 
+      - name: wake ddg
+        shell: bash
+        continue-on-error: true
+        run: |
+          echo "----37 ----"
+          curl --location 'https://leafmoes-ddg-chat.hf.space/bbl/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
+          echo "----38 ----"
+          # https://huggingface.co/spaces/mikeee/ddg-chat 1 
+          curl --location 'https://mikeee-ddg-chat.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
+          echo "----39 ----"
+          # https://huggingface.co/spaces/sajaxs/ddg-chat 1
+          curl --location 'https://sajaxs-ddg-chat.hf.space/sai/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
+          echo "----40 ----"
+          #https://huggingface.co/spaces/alcex/ddg-chat 1
+          curl --location 'https://alcex-ddg-chat.hf.space/mix/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
+          echo "----41 ----"
+          # https://huggingface.co/spaces/gccnb/duck2api 1
+          curl --location 'https://gccnb-duck2api.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
+          echo "----42 ----"
+          curl --location 'https://mikeee-duck2api.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
+
 
       - name: wake yxmnjxzx
         shell: bash
@@ -192,7 +213,4 @@ jobs:
         run: |
           curl --location 'https://yxmnjxzx-openai-reverse-proxy.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o", "messages": [{"role": "system", "content": "You are a helpful assistant."}, {"role": "user", "content": "Hello, who are you?"}], "stream": false, "temperature": 0.7, "max_tokens": 8000}'
           curl https://yxmnjxzx-chaton2api1.hf.space/ai/v1/models
-
-
-
 
