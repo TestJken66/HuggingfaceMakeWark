@@ -20,52 +20,52 @@ jobs:
         shell: bash
         continue-on-error: true
         run: |
-          echo "----duck2api----"
+          echo "----1duck2api----"
           curl --location 'https://sanbo1200-duck2api.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
 
-          echo "----d1----"
+          echo "----2d1----"
           curl --location 'https://sanbo1200-d1.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
 
-          echo "----d2----"
+          echo "----3d2----"
           curl --location 'https://sanbo1200-d2.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
 
-          echo "----d3----"
+          echo "----4d3----"
           curl --location 'https://sanbo1200-d3.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
 
-          echo "----d4----"
+          echo "----5d4----"
           curl --location 'https://sanbo1200-d4.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
 
-          echo "----d5----"
+          echo "----6d5----"
           curl --location 'https://sanbo1200-d5.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
 
-          echo "----ddg----"
+          echo "----7ddg----"
           curl --location 'https://sanbo1200-ddghat.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
 
-          echo "----sanbo110----"
+          echo "----8sanbo110----"
           curl --location 'https://sanbo110-test.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
 
-          echo "----whats----"
+          echo "----9whats----"
           curl --location 'https://sanbo110-whats-this.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
 
-          echo "----degpt----"
+          echo "----10degpt----"
           curl -X POST 'https://sanbo1200-degpt.hf.space/hf/v1/chat/completions' -H "Content-Type: application/json" -d '{"model": "Qwen2.5-72B","messages": [{"role": "system", "content": "You are a helpful assistant."}, {"role": "user", "content": "你是什么模型，你有什么特点?"}]}'
 
-          echo "----black2api----"
+          echo "----11black2api----"
           curl --location 'https://sanbo1200-bac.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --header 'Authorization: Bearer 316287378' --data '{"model": "gpt-4o", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}'
 
-          echo "----mikeee-ddg-chat.hf----"
+          echo "----12mikeee-ddg-chat.hf----"
           curl --location 'https://mikeee-ddg-chat.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
 
-          echo "----sanbo1200-ddg-chat1.hf.space----"
+          echo "----13sanbo1200-ddg-chat1.hf.space----"
           curl --location 'https://sanbo1200-ddg-chat1.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
 
-          echo "----helloaiworlds-ddg-docker----"
+          echo "----14helloaiworlds-ddg-docker----"
           curl --location 'https://helloaiworlds-ddg-docker.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
 
-          echo "----helloaiworlds-ddghat-ui.hf.space----"
+          echo "----15helloaiworlds-ddghat-ui.hf.space----"
           curl --location 'https://helloaiworlds-ddghat-ui.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
 
-          echo "----black2api----"
+          echo "----16black2api----"
           curl --location 'https://helloaiworlds-abc.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --header 'Authorization: Bearer HelloAiWorlds' --data '{"model": "gpt-4o", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}'
 
 
@@ -75,13 +75,13 @@ jobs:
         shell: bash
         continue-on-error: true
         run: |
-          echo "----duck2api----"
+          echo "----17duck2api----"
           curl --location 'https://helloaiworlds-duck2api.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
 
-          echo "----helloaiworlds----"
+          echo "----18helloaiworlds----"
           curl --location 'https://helloaiworlds-degpt.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
 
-          echo "----helloaiworlds----"
+          echo "----19helloaiworlds----"
           curl 'https://helloaiworlds-gpt4free.hf.space/backend-api/v2/conversation' --header 'accept: text/event-stream' --header 'content-type: application/json' --data '{"id":"7451863958129937572","conversation_id":"f9ea7fcd-77b5-4c1e-8a3e-4cbf08db7f74","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
 
 
@@ -89,93 +89,110 @@ jobs:
         shell: bash
         continue-on-error: true
         run: |
-          echo "----duck2api----"
+          echo "----20 g4f1----"
           curl 'https://sanbo1200-gpt4free.hf.space/backend-api/v2/conversation'  --header  'content-type: application/json'  --data   $'{"id":"7451503782898626811","conversation_id":"16e96302-34bb-48f4-bd28-44c2f319068c","model":"gpt-4o","web_search":true,"provider":"","messages":[{"role":"user","content":"hi"},{"role":"assistant","content":"Hello\u0021 How can I assist you today?"},{"role":"user","content":"\\nhi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
 
       - name: wake g4f2
         shell: bash
         continue-on-error: true
         run: |
+          echo "----21 g4f1----"
           curl 'https://sanbo110-g4f.hf.space/backend-api/v2/conversation'  --header  'content-type: application/json'  --data   $'{"id":"7451505100618656824","conversation_id":"303d5a50-bc29-42fc-b093-9284ef04b90c","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
 
       - name: wake g4f3
         shell: bash
         continue-on-error: true
         run: |
+          echo "----22 g4f1----"
           curl 'https://sanbo110-g4f.hf.space/backend-api/v2/conversation'  --header  'content-type: application/json'  --data   $'{"id":"7451505100618656824","conversation_id":"303d5a50-bc29-42fc-b093-9284ef04b90c","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
 
       - name: wake g4f4
         shell: bash
         continue-on-error: true
         run: |
+          echo "----23 g4f1----"
           curl 'https://masimi-g4f.hf.space/backend-api/v2/conversation'  --header  'content-type: application/json'  --header  'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36' --data   '{"id":"7451494978228041235","conversation_id":"7456c386-d483-4e7a-972c-b7808c1d99be","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}' 
   
       - name: wake g4f5
         shell: bash
         continue-on-error: true
         run: |
-           curl 'https://hrmndev-g4f.hf.space/backend-api/v2/conversation'  --header  'content-type: application/json' --header  'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36' --data   '{"id":"7451495136008967937","conversation_id":"7bdbce3a-0239-4778-894f-594eb69cf602","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}' 
+          echo "----24 g4f1----"
+          curl 'https://hrmndev-g4f.hf.space/backend-api/v2/conversation'  --header  'content-type: application/json' --header  'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36' --data   '{"id":"7451495136008967937","conversation_id":"7bdbce3a-0239-4778-894f-594eb69cf602","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}' 
 
       - name: wake g4f6
         shell: bash
         continue-on-error: true
         run: |
-           curl 'https://mrdonstuff-gpt4free.hf.space/backend-api/v2/conversation' --header  'content-type: application/json' --header  'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36' --data   '{"id":"7451495381534712828","conversation_id":"51e12012-d657-460c-94da-5cec5bd4e082","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
+          echo "----25 g4f1----"
+          curl 'https://mrdonstuff-gpt4free.hf.space/backend-api/v2/conversation' --header  'content-type: application/json' --header  'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36' --data   '{"id":"7451495381534712828","conversation_id":"51e12012-d657-460c-94da-5cec5bd4e082","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
 
       - name: wake g4f7
         shell: bash
         continue-on-error: true
         run: |
-           curl 'https://shethjenil-gpt4free.hf.space/backend-api/v2/conversation' --header  'content-type: application/json' --data   '{"id":"7451495764089842349","conversation_id":"df682651-8029-4f9f-bbdb-193f246a8ee","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"api_key":null}' 
+          echo "----26 g4f1----"
+          curl 'https://shethjenil-gpt4free.hf.space/backend-api/v2/conversation' --header  'content-type: application/json' --data   '{"id":"7451495764089842349","conversation_id":"df682651-8029-4f9f-bbdb-193f246a8ee","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"api_key":null}' 
 
       - name: wake g4f8
         shell: bash
         continue-on-error: true
         run: |
-           curl 'https://ethanmaht-g4f.hf.space/backend-api/v2/conversation' --header  'content-type: application/json' --data   '{"id":"7451497941381090224","conversation_id":"ae699456-9200-4b38-92cc-c88774c441cd","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
+          echo "----27 g4f1----"
+          curl 'https://ethanmaht-g4f.hf.space/backend-api/v2/conversation' --header  'content-type: application/json' --data   '{"id":"7451497941381090224","conversation_id":"ae699456-9200-4b38-92cc-c88774c441cd","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
 
       - name: wake ethan
         shell: bash
         continue-on-error: true
         run: |
-           curl --location 'https://ethanmaht-dg-gtp-4o-mini-0.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}'
-           curl --location 'https://ethanmaht-dg-gpt4o-mini-1.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}'
-           curl --location 'https://ethanmaht-simi0.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}' 
+          echo "----28 ----"
+          curl --location 'https://ethanmaht-dg-gtp-4o-mini-0.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}'
+          echo "----29 ----"
+          curl --location 'https://ethanmaht-dg-gpt4o-mini-1.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}'
+          echo "----30 ----"
+          curl --location 'https://ethanmaht-simi0.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}' 
 
       - name: wake yxmnjxzx
         shell: bash
         continue-on-error: true
         run: |
-           curl --location 'https://yxmnjxzx-openai-reverse-proxy.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o", "messages": [{"role": "system", "content": "You are a helpful assistant."}, {"role": "user", "content": "Hello, who are you?"}], "stream": false, "temperature": 0.7, "max_tokens": 8000}'
-           curl https://yxmnjxzx-chaton2api1.hf.space/ai/v1/models
-
-      - name: wake yxmnjxzx
-        shell: bash
-        continue-on-error: true
-        run: |
+          echo "----31 ----"
           curl --location 'https://mikeee-blackbox2api.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --header 'Authorization: Bearer 316287378' --data '{"model": "gpt-4o", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}'
-          curl --location 'https://sanbo1200-bac.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --header 'Authorization: Bearer 316287378' --data '{"model": "gpt-4o", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}'
+
 
 
       - name: wake yxmnjxzx
         shell: bash
         continue-on-error: true
         run: |
+          echo "----32 ----"
           curl --location 'https://niansuhai-dapi.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
+
+
 
 
       - name: wake mikeee
         shell: bash
         continue-on-error: true
         run: |
-          curl --location 'https://mikeee-notdiamond2api1.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o","messages": [{"role": "user", "content": "你的知识库最后什么日期"}]}'
-          echo " black2 box"
+          echo "----33 ----"
           curl --location 'https://mikeee-blackbox2api.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --header 'Authorization: Bearer 316287378' --data '{"model": "gpt-4o", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}'
-           curl --location 'https://mikeee-ddg-chat.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
-          echo "xxxxxxx"
-           curl 'https://mikeee-nextchat.hf.space/api/openai/v1/chat/completions' -H 'accept: application/json, text/event-stream'   -H 'content-type: application/json'   --data-raw '{"messages":[{"role":"user","content":"你是什么模型，你的知识库截止到什么时间"}],"stream":false,"model":"gpt-4o-mini","temperature":0.5,"presence_penalty":0,"frequency_penalty":0,"top_p":1}'
-           curl 'https://mikeee-nextchat.hf.space/api/openai/v1/chat/completions'  -H 'content-type: application/json' --data-raw '{"messages":[{"role":"user","content":"你的什么模型"}],"stream":false,"model":"gpt-4","temperature":0.5,"presence_penalty":0,"frequency_penalty":0,"top_p":1}'
-           curl 'https://mikeee-nextchat.hf.space/api/openai/v1/chat/completions'  -H 'content-type: application/json' --data-raw '{"messages":[{"role":"user","content":"你的什么模型"}],"stream":false,"model":"gpt-4o","temperature":0.5,"presence_penalty":0,"frequency_penalty":0,"top_p":1}'
+          echo "----34 ----"
+          curl --location 'https://mikeee-ddg-chat.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
+          echo "----35 ----"
+          curl 'https://mikeee-nextchat.hf.space/api/openai/v1/chat/completions' -H 'accept: application/json, text/event-stream'   -H 'content-type: application/json'   --data-raw '{"messages":[{"role":"user","content":"你是什么模型，你的知识库截止到什么时间"}],"stream":false,"model":"gpt-4o-mini","temperature":0.5,"presence_penalty":0,"frequency_penalty":0,"top_p":1}'
+          echo "----36 ----"
+          curl 'https://mikeee-nextchat.hf.space/api/openai/v1/chat/completions'  -H 'content-type: application/json' --data-raw '{"messages":[{"role":"user","content":"你的什么模型"}],"stream":false,"model":"gpt-4","temperature":0.5,"presence_penalty":0,"frequency_penalty":0,"top_p":1}'
+
+
+
+      - name: wake yxmnjxzx
+        shell: bash
+        continue-on-error: true
+        run: |
+          curl --location 'https://yxmnjxzx-openai-reverse-proxy.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o", "messages": [{"role": "system", "content": "You are a helpful assistant."}, {"role": "user", "content": "Hello, who are you?"}], "stream": false, "temperature": 0.7, "max_tokens": 8000}'
+          curl https://yxmnjxzx-chaton2api1.hf.space/ai/v1/models
+
 
 
 
