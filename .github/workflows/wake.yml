@@ -120,7 +120,7 @@ jobs:
           echo -e  "\n----24 g4f1----\n"
           curl  -s 'https://hrmndev-g4f.hf.space/backend-api/v2/conversation'  --header  'content-type: application/json' --header  'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36' --data   '{"id":"7451495136008967937","conversation_id":"7bdbce3a-0239-4778-894f-594eb69cf602","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}' 
 
-      - name: wake g4f6
+      - name: wake g4f6-500错误
         shell: bash
         continue-on-error: true
         run: |
