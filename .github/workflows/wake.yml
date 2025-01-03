@@ -192,16 +192,12 @@ jobs:
           echo "----37 ----"
           curl --location 'https://leafmoes-ddg-chat.hf.space/bbl/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
           echo "----38 ----"
-          # https://huggingface.co/spaces/mikeee/ddg-chat 1 
           curl --location 'https://mikeee-ddg-chat.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
           echo "----39 ----"
-          # https://huggingface.co/spaces/sajaxs/ddg-chat 1
           curl --location 'https://sajaxs-ddg-chat.hf.space/sai/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
           echo "----40 ----"
-          #https://huggingface.co/spaces/alcex/ddg-chat 1
           curl --location 'https://alcex-ddg-chat.hf.space/mix/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
           echo "----41 ----"
-          # https://huggingface.co/spaces/gccnb/duck2api 1
           curl --location 'https://gccnb-duck2api.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
           echo "----42 ----"
           curl --location 'https://mikeee-duck2api.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
