@@ -218,7 +218,7 @@ jobs:
           curl -s --location 'https://mikeee-duck2api.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
 
 
-      - name: wake ddg
+      - name: wake linuxdo
         shell: bash
         continue-on-error: true
         timeout-minutes: 0.5
@@ -227,6 +227,9 @@ jobs:
           curl -s --location 'https://freeapi.oaiopen.com/v1/chat/completions' --header 'Content-Type: application/json' --header 'Authorization: Bearer Magic-12345' --data '{"model": "gpt-4o", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}'
           echo -e  "\n----44 ----\n"
           curl -s --location 'https://gs.aytsao.cn/v1/chat/completions' --header 'Content-Type: application/json' --header 'Authorization: Bearer sk-genspark2api' --data '{"model": "gpt-4o", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}'
+          echo -e  "\n----45 ----\n"
+          curl -s --location 'https://api.freechat.cnai.me/v1/chat/completions' --header 'Content-Type: application/json' --header 'Authorization: Bearer xx' --data '{"model": "gpt-4o-mini", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": true}'
+
 
       - name: wake yxmnjxzx
         shell: bash
