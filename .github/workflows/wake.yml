@@ -11,7 +11,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 2
+    timeout-minutes: 5
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -19,6 +19,7 @@ jobs:
       - name: wake sanbo
         shell: bash
         continue-on-error: true
+        timeout-minutes: 2
         run: |
           echo -e  "\n----1----\n"
           curl -s --location 'https://sanbo1200-duck2api.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
@@ -74,6 +75,7 @@ jobs:
       - name: wake helloai
         shell: bash
         continue-on-error: true
+        timeout-minutes: 1
         run: |
           echo -e  "\n----17 duck2api----\n"
           curl -s --location 'https://helloaiworlds-duck2api.hf.space/hf/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
@@ -88,6 +90,7 @@ jobs:
       - name: wake g4f1
         shell: bash
         continue-on-error: true
+        timeout-minutes: 0.5
         run: |
           echo -e  "\n----20 g4f1----\n"
           curl  -s 'https://sanbo1200-gpt4free.hf.space/backend-api/v2/conversation'  --header  'content-type: application/json'  --data   $'{"id":"7451503782898626811","conversation_id":"16e96302-34bb-48f4-bd28-44c2f319068c","model":"gpt-4o","web_search":true,"provider":"","messages":[{"role":"user","content":"hi"},{"role":"assistant","content":"Hello\u0021 How can I assist you today?"},{"role":"user","content":"\\nhi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
@@ -95,6 +98,7 @@ jobs:
       - name: wake g4f2
         shell: bash
         continue-on-error: true
+        timeout-minutes: 0.5
         run: |
           echo -e  "\n----21 g4f1----\n"
           curl  -s 'https://sanbo110-g4f.hf.space/backend-api/v2/conversation'  --header  'content-type: application/json'  --data   $'{"id":"7451505100618656824","conversation_id":"303d5a50-bc29-42fc-b093-9284ef04b90c","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
@@ -102,6 +106,7 @@ jobs:
       - name: wake g4f3
         shell: bash
         continue-on-error: true
+        timeout-minutes: 0.5
         run: |
           echo -e  "\n----22 g4f1----\n"
           curl  -s 'https://sanbo110-g4f.hf.space/backend-api/v2/conversation'  --header  'content-type: application/json'  --data   $'{"id":"7451505100618656824","conversation_id":"303d5a50-bc29-42fc-b093-9284ef04b90c","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
@@ -109,6 +114,7 @@ jobs:
       - name: wake g4f4
         shell: bash
         continue-on-error: true
+        timeout-minutes: 0.5
         run: |
           echo -e  "\n----23 g4f1----\n"
           curl  -s 'https://masimi-g4f.hf.space/backend-api/v2/conversation'  --header  'content-type: application/json'  --header  'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36' --data   '{"id":"7451494978228041235","conversation_id":"7456c386-d483-4e7a-972c-b7808c1d99be","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}' 
@@ -116,6 +122,7 @@ jobs:
       - name: wake g4f5
         shell: bash
         continue-on-error: true
+        timeout-minutes: 0.5
         run: |
           echo -e  "\n----24 g4f1----\n"
           curl  -s 'https://hrmndev-g4f.hf.space/backend-api/v2/conversation'  --header  'content-type: application/json' --header  'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36' --data   '{"id":"7451495136008967937","conversation_id":"7bdbce3a-0239-4778-894f-594eb69cf602","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}' 
@@ -123,6 +130,7 @@ jobs:
       - name: wake g4f6
         shell: bash
         continue-on-error: true
+        timeout-minutes: 0.5
         run: |
           echo -e  "\n----25 g4f1----\n"
           curl  -s 'https://mrdonstuff-gpt4free.hf.space/backend-api/v2/conversation' --header  'content-type: application/json' --header  'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36' --data   '{"id":"7451495381534712828","conversation_id":"51e12012-d657-460c-94da-5cec5bd4e082","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
@@ -130,6 +138,7 @@ jobs:
       - name: wake g4f7-500错误
         shell: bash
         continue-on-error: true
+        timeout-minutes: 0.5
         run: |
           echo -e  "\n----26 g4f1----\n"
           curl -s 'https://shethjenil-gpt4free.hf.space/backend-api/v2/conversation' --header  'content-type: application/json' --data   '{"id":"7451495764089842349","conversation_id":"df682651-8029-4f9f-bbdb-193f246a8ee","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"api_key":null}' 
@@ -137,6 +146,7 @@ jobs:
       - name: wake g4f8
         shell: bash
         continue-on-error: true
+        timeout-minutes: 0.5
         run: |
           echo -e  "\n----27 g4f1----\n"
           curl  -s 'https://ethanmaht-g4f.hf.space/backend-api/v2/conversation' --header  'content-type: application/json' --data   '{"id":"7451497941381090224","conversation_id":"ae699456-9200-4b38-92cc-c88774c441cd","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
@@ -144,6 +154,7 @@ jobs:
       - name: wake ethan
         shell: bash
         continue-on-error: true
+        timeout-minutes: 0.5
         run: |
           echo -e  "\n----28 ----\n"
           curl -s --location 'https://ethanmaht-dg-gtp-4o-mini-0.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}'
@@ -155,6 +166,7 @@ jobs:
       - name: wake yxmnjxzx
         shell: bash
         continue-on-error: true
+        timeout-minutes: 0.5
         run: |
           echo -e  "\n----31 ----\n"
           curl -s --location 'https://mikeee-blackbox2api.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --header 'Authorization: Bearer 316287378' --data '{"model": "gpt-4o", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}'
@@ -163,6 +175,7 @@ jobs:
 
       - name: wake yxmnjxzx
         shell: bash
+        timeout-minutes: 0.5
         continue-on-error: true
         run: |
           echo -e  "\n----32 ----\n"
@@ -174,6 +187,7 @@ jobs:
       - name: wake mikeee
         shell: bash
         continue-on-error: true
+        timeout-minutes: 0.5
         run: |
           echo -e  "\n----33 ----\n"
           curl -s --location 'https://mikeee-blackbox2api.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --header 'Authorization: Bearer 316287378' --data '{"model": "gpt-4o", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}'
@@ -188,6 +202,7 @@ jobs:
       - name: wake ddg
         shell: bash
         continue-on-error: true
+        timeout-minutes: 0.5
         run: |
           echo -e  "\n----37 ----\n"
           curl -s --location 'https://leafmoes-ddg-chat.hf.space/bbl/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gpt-4o-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
@@ -206,6 +221,7 @@ jobs:
       - name: wake ddg
         shell: bash
         continue-on-error: true
+        timeout-minutes: 0.5
         run: |
           echo -e  "\n----43 ----\n"
           curl -s --location 'https://freeapi.oaiopen.com/v1/chat/completions' --header 'Content-Type: application/json' --header 'Authorization: Bearer Magic-12345' --data '{"model": "gpt-4o", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}'
