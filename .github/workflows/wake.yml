@@ -86,6 +86,8 @@ jobs:
           echo -e  "\n----19 helloaiworlds----\n"
           curl  -s 'https://helloaiworlds-gpt4free.hf.space/backend-api/v2/conversation' --header 'accept: text/event-stream' --header 'content-type: application/json' --data '{"id":"7451863958129937572","conversation_id":"f9ea7fcd-77b5-4c1e-8a3e-4cbf08db7f74","model":"gpt-4o","web_search":false,"provider":"","messages":[{"role":"user","content":"hi"}],"auto_continue":true,"download_images":true,"api_key":null,"ignored":[]}'
 
+          
+
 
       - name: wake g4f1
         shell: bash
@@ -252,3 +254,7 @@ jobs:
           curl -s --location 'https://getmerlin2api.vercel.app/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "claude-3-haiku", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}'
           echo -e  "\n----48 ----\n"
           curl -s --location 'https://getmerlin2api.vercel.app/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gemini-1.5-flash", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}'
+          echo -e  "\n----49 ----\n"
+          curl -X POST https://sanbo1200-pekingduck.hf.space/chat1 -H 'Accept: application/json' -H 'Authorization: Bearer YOUR_API_KEY' -H "Content-Type: application/json" -d '{"model": "auto", "messages": [{"role": "user", "content": "你是什么模型?"}], "temperature": 0.7, "max_tokens": 150, "top_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0}'
+
+          
