@@ -252,5 +252,5 @@ jobs:
           curl -X POST https://sanbo1200-pekingduck.hf.space/chat1 -H 'Accept: application/json' -H 'Authorization: Bearer YOUR_API_KEY' -H "Content-Type: application/json" -d '{"model": "auto", "messages": [{"role": "user", "content": "你是什么模型?"}], "temperature": 0.7, "max_tokens": 150, "top_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0}'
           echo -e  "\n----47 ----\n"
           curl -s --location 'http://221.122.57.36:11434/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "deepseek-r1:32b","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
-          echo -e "\n------48------\n"
-          curl -s --location 'https://aifree4.fly.dev/v1/chat/completions' --header 'Content-Type: application/json' --header 'Authorization: Bearer sk-SqkvYZROzSd0dLetAEZEzKwwQ9X4hGizrrWA8qJ6JddPF81e' --data '{"model": "deepseek-ai/DeepSeek-R1", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}'
+          
+          
