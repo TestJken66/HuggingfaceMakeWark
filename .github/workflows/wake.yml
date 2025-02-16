@@ -272,3 +272,4 @@ jobs:
           curl https://helloaiworlds-gurans-demo.hf.space/v1/models
           curl -s --location 'https://helloaiworlds-gurans-demo.hf.space/translate' --header 'Content-Type: application/json' --data '{"msgId":"","srcContent":"","nameList":"","languageFrom":"auto","languageTo":"en","srcDecryptedContent":"武当山驻少林寺办事处王喇嘛，给大家介绍私米，还有无链，介绍l一个文章： https://chainless.hk/zh-hans/2023/11/26/dw20%e5%8e%bb%e4%b8%ad%e5%bf%83%e6%9c%ac%e4%bd%8d%e5%b8%81%e7%9a%84%e5%ae%9e%e7%8e%b0/   好了","serverMsgId":"","num":100}';
 
+
