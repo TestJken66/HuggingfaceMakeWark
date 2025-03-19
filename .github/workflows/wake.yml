@@ -259,10 +259,6 @@ jobs:
           curl -s --location 'https://getmerlin2api.vercel.app/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "gemini-1.5-flash", "messages": [{"role": "system", "content": "你是一个辅助机器人"}, {"role": "user", "content": "你的知识库最后什么日期"}], "stream": false}'
           echo -e  "\n----49 ----\n"
           curl -X POST https://sanbo1200-pekingduck.hf.space/chat1 -H 'Accept: application/json' -H 'Authorization: Bearer YOUR_API_KEY' -H "Content-Type: application/json" -d '{"model": "auto", "messages": [{"role": "user", "content": "你是什么模型?"}], "temperature": 0.7, "max_tokens": 150, "top_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0}'
-          echo -e  "\n----50 ----\n"
-          curl -s --location 'http://221.122.57.36:11434/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "deepseek-r1:32b","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
-          curl -X POST https://sanbo1200-planrun.hf.space/chat1 -H 'Accept: application/json' -H 'Authorization: Bearer YOUR_API_KEY' -H "Content-Type: application/json" -d '{"model": "auto", "messages": [{"role": "user", "content": "你是什么模型?"}], "temperature": 0.7, "max_tokens": 150, "top_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0}'
-
 
 
       - name: wake SMNETSTUDIO/GetMerlin2Api
@@ -292,7 +288,15 @@ jobs:
           curl -s -X POST https://ethanmaht-ethan-ncc.hf.space/chat1 -H 'Accept: application/json' -H 'Authorization: Bearer merge_003' -H "Content-Type: application/json" -d '{"model": "Qwen2.5-VL-72B-Instruct", "messages": [{"role":"user","content":[{"type":"text","text":"这个图片是什么？"},{"type":"image_url","image_url":{"url":"https://dcdn.simitalk.com/n/cnv0rhttwcqq/b/bucket-im-test/o/community/im-images/2025-01-08/rgwqu-1736334050250-17E7748A-8DE2-47E6-BC44-1D65C8EAAEE6.jpg"}}]}]}'
           curl -s -X POST https://int0x80h-llm.hf.space/chat1 -H 'Accept: application/json' -H 'Authorization: Bearer merge_005' -H "Content-Type: application/json" -d '{"model": "Qwen2.5-VL-72B-Instruct", "messages": [{"role":"user","content":[{"type":"text","text":"这个图片是什么？"},{"type":"image_url","image_url":{"url":"https://dcdn.simitalk.com/n/cnv0rhttwcqq/b/bucket-im-test/o/community/im-images/2025-01-08/rgwqu-1736334050250-17E7748A-8DE2-47E6-BC44-1D65C8EAAEE6.jpg"}}]}]}'
 
-
+      - name: wake +++
+        shell: bash
+        continue-on-error: true
+        timeout-minutes: 0.5
+        run: |
+          echo -e  "\n----1111----\n"
+          curl -s -X POST https://ethanmaht-my-de-2.hf.space/chat1 -H 'Accept: application/json' -H 'Authorization: Bearer merge_003' -H "Content-Type: application/json" -d '{"model": "Qwen2.5-VL-72B-Instruct", "messages": [{"role":"user","content":[{"type":"text","text":"这个图片是什么？"},{"type":"image_url","image_url":{"url":"https://dcdn.simitalk.com/n/cnv0rhttwcqq/b/bucket-im-test/o/community/im-images/2025-01-08/rgwqu-1736334050250-17E7748A-8DE2-47E6-BC44-1D65C8EAAEE6.jpg"}}]}]}'
+          curl -s -X POST https://ethanmaht-my-de-1.hf.space/chat1 -H 'Accept: application/json' -H 'Authorization: Bearer merge_003' -H "Content-Type: application/json" -d '{"model": "Qwen2.5-VL-72B-Instruct", "messages": [{"role":"user","content":[{"type":"text","text":"这个图片是什么？"},{"type":"image_url","image_url":{"url":"https://dcdn.simitalk.com/n/cnv0rhttwcqq/b/bucket-im-test/o/community/im-images/2025-01-08/rgwqu-1736334050250-17E7748A-8DE2-47E6-BC44-1D65C8EAAEE6.jpg"}}]}]}'
+          curl -s -X POST https://ethanmaht-my-de.hf.space/chat1 -H 'Accept: application/json' -H 'Authorization: Bearer merge_003' -H "Content-Type: application/json" -d '{"model": "Qwen2.5-VL-72B-Instruct", "messages": [{"role":"user","content":[{"type":"text","text":"这个图片是什么？"},{"type":"image_url","image_url":{"url":"https://dcdn.simitalk.com/n/cnv0rhttwcqq/b/bucket-im-test/o/community/im-images/2025-01-08/rgwqu-1736334050250-17E7748A-8DE2-47E6-BC44-1D65C8EAAEE6.jpg"}}]}]}'
 
 
 
