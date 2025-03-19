@@ -276,3 +276,15 @@ jobs:
           curl -s --location 'https://helloaiworlds-gurans-demo.hf.space/translate' --header 'Content-Type: application/json' --data '{"msgId":"","srcContent":"","nameList":"","languageFrom":"auto","languageTo":"en","srcDecryptedContent":"武当山驻少林寺办事处王喇嘛，给大家介绍私米，还有无链，介绍l一个文章： https://chainless.hk/zh-hans/2023/11/26/dw20%e5%8e%bb%e4%b8%ad%e5%bf%83%e6%9c%ac%e4%bd%8d%e5%b8%81%e7%9a%84%e5%ae%9e%e7%8e%b0/   好了","serverMsgId":"","num":100}';
 
 
+      - name: wake xxxx
+        shell: bash
+        continue-on-error: true
+        timeout-minutes: 0.5
+        run: |
+          echo -e  "\n----ooo----\n"
+          curl -X POST https://sanbo1200-planrun.hf.space/chat1 -H 'Accept: application/json' -H 'Authorization: Bearer merge_001' -H "Content-Type: application/json" -d '{"model": "auto", "messages": [{"role": "user", "content": "你是什么模型?"}], "temperature": 0.7, "max_tokens": 150, "top_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0}'
+          curl -X POST https://helloaiworlds-hhi.hf.space/chat1 -H 'Accept: application/json' -H 'Authorization: Bearer merge_001' -H "Content-Type: application/json" -d '{"model": "auto", "messages": [{"role": "user", "content": "你是什么模型?"}], "temperature": 0.7, "max_tokens": 150, "top_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0}'
+          curl -X POST https://helloaiworlds-hhi.hf.space/chat1 -H 'Accept: application/json' -H 'Authorization: Bearer merge_001' -H "Content-Type: application/json" -d '{"model": "auto", "messages": [{"role": "user", "content": "你是什么模型?"}], "temperature": 0.7, "max_tokens": 150, "top_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0}'
+          curl -X POST https://sanbo1200-degpt.hf.space/chat1 -H 'Accept: application/json' -H 'Authorization: Bearer merge_001' -H "Content-Type: application/json" -d '{"model": "auto", "messages": [{"role": "user", "content": "你是什么模型?"}], "temperature": 0.7, "max_tokens": 150, "top_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0}'
+          curl -X POST https://sanbo1200-de-0227.hf.space/chat1 -H 'Accept: application/json' -H 'Authorization: Bearer merge_001' -H "Content-Type: application/json" -d '{"model": "auto", "messages": [{"role": "user", "content": "你是什么模型?"}], "temperature": 0.7, "max_tokens": 150, "top_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0}'
+
