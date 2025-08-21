@@ -21,6 +21,7 @@ jobs:
         continue-on-error: true
         timeout-minutes: 2
         run: |
+          curl https://sanbo1200-d.hf.space/api/v1/models
           curl -s --location 'https://chat.typegpt.net/api/openai/v1/chat/completions' --header 'Content-Type: application/json' --data '{"messages": [{"role": "user", "content": "你是什么模型"}],"stream":false,"model":"deepseek-r1","temperature":0.5,"presence_penalty":0,"frequency_penalty":0,"top_p":1}'
           echo -e  "\n----0----\n"
           curl -s --location 'https://niansuhai-dapi.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --data '{"model": "o3-mini","messages": [{"role":"system","content":"你是一个辅助机器人"},{"role": "user", "content": "你的知识库最后什么日期"}],"stream": false}'
