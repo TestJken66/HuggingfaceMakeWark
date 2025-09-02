@@ -16,6 +16,14 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
 
+      - name: wake 21
+        shell: bash
+        continue-on-error: true
+        timeout-minutes: 2
+        run: |
+          curl https://sanbo1200-z.hf.space/api/v1/models
+          curl -s --location 'https://sanbo1200-z.hf.space/api/v1/chat/completions' --header 'Content-Type: application/json' --header 'Authorization: Bearer test' --data '{"messages": [{"role": "user", "content": "你是什么模型"}],"stream":false,"model":"GLM-4.5","temperature":0.5,"presence_penalty":0,"frequency_penalty":0,"top_p":1}'
+
       - name: wake sanbo
         shell: bash
         continue-on-error: true
